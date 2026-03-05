@@ -1,0 +1,60 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+</head>
+
+<body>
+<div class="container">
+    <h2>Ethical Test</h2>
+
+    <h4>Question 1</h4>
+    <p>True or False: It is ethical for a manager to disclose confidential employee information to unauthorized personnel.</p>
+    <form action="/wrong" method="post">
+        <input type="submit" value="False">
+    </form>
+    <form action="/correct" method="post">
+        <input type="submit" value="True">
+    </form>
+
+    <h4>Question 2</h4>
+    <p>True or False: Accepting gifts from a client in a competitive bidding process is ethically permissible.</p>
+    <form action="/wrong" method="post">
+        <input type="submit" value="False">
+    </form>
+    <form action="/correct" method="post">
+        <input type="submit" value="True">
+    </form>
+
+    <h4>Question 3</h4>
+    <p>True or False: It is ethical for a software developer to copy code from an open-source project without attribution if it saves time on a tight deadline.</p>
+    <form action="/wrong" method="post">
+        <input type="submit" value="False">
+    </form>
+    <form action="/correct" method="post">
+        <input type="submit" value="True">
+    </form>
+
+    <h4>Question 4</h4>
+    <p>True or False: A doctor can ethically prioritize treatment based on a patient's ability to pay.</p>
+    <form action="/wrong" method="post">
+        <input type="submit" value="False">
+    </form>
+    <form action="/correct" method="post">
+        <input type="submit" value="True">
+    </form>
+
+    <h4>Question 5</h4>
+    <p>True or False: It is ethical for a teacher to grade students differently based on personal liking.</p>
+    <form action="/wrong" method="post">
+        <input type="submit" value="False">
+    </form>
+    <form action="/correct" method="post">
+        <input type="submit" value="True">
+    </form>
+
+    <br>
+    <form action="/main" method="post">
+        <input type="submit" value="Back">
+    </form>
+</div>
+</body>
