@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import joblib
 
 app = Flask(__name__)
 
@@ -23,5 +24,16 @@ def correct():
 def wrong():
     return(render_template("wrong.html"))
 
+@app.route("/econ",methods=["GET","POST"])
+def econ():
+    return(render_template("econ.html"))
+
+@app.route("/foodexp",methods=["GET","POST"])
+def foodexp():
+    salary = float(request.form.get("salary"))
+    model = joblib.load('foodexp.pkl')
+    r = model.predict([[salary]])
+    return(render_template("foodexp.html",r=r))
+
 if __name__ == "__main__":
-    app.run(port=8000)
+    app.run()
