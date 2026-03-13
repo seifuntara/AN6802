@@ -1,0 +1,26 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+    <h2>Chatbot</h2>
+
+    <form action="/chatbot" method="post">
+        <p>Ask a question<p>
+        <input type="text" name="query">
+        <input type="submit" value="Enter">
+    </form>
+
+    {% if r %}
+        <p><b>Answer:</b> {{ r }}</p>
+    {% endif %}
+
+    <form action="/main" method="post">
+        <input type="submit" value="Back">
+    </form>
+
+</div>
+</body>
